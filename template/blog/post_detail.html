@@ -1,3 +1,9 @@
 <p>{{post.content}}</p>
 <p>{{post.title}}</p>
 <p>{{published_recently}}</p>
+{% for comment in comments %}
+<li>
+    <span>{{comment.author_name}}</span>
+    <span>{{comment.text}}</span>
+</li>
+{% endfor %}

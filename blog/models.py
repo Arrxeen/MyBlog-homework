@@ -24,7 +24,7 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    post_id = models.ForeignKey(Post, on_delete=models.DO_NOTHING)
+    post_id = models.ForeignKey(Post, on_delete=models.DO_NOTHING, related_name="comments")
     author_name = models.CharField(max_length=100)
     text = models.TextField()
     creat_data_time = models.DateTimeField(auto_now_add=True)

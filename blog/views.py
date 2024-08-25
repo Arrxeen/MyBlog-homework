@@ -20,7 +20,8 @@ def post_detail(request, pk):
     post = models.Post.objects.get(id=pk)
     context = {
         "post": post,
-        'published_recently': post.published_recently()
+        'published_recently': post.published_recently(),
+        'comments': post.comments.all()
     }
 
     return render(request,'blog/post_detail.html', context)
