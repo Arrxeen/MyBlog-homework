@@ -1,0 +1,13 @@
+{% load static %}
+
+<head><link rel="stylesheet" href="{% static 'CSS/style.css' %}"></head>
+
+{% for post in posts %}
+<p>{{post.title}}</p>
+<p>{{post.published_date_time}}</p>
+<p>{{post.content}}</p>
+<p>{{post.id_author}}</p>
+
+{% endfor %}
+
+<p>{{published_recently}}</p>

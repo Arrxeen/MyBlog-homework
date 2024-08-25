@@ -1,0 +1,7 @@
+{% load static %}
+
+<head><link rel="stylesheet" href="{% static 'CSS/style.css' %}"></head>
+
+{% for post in author_posts %}
+<p>{{post.title}}</p>
+{% endfor %}
